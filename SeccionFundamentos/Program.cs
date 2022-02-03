@@ -11,7 +11,7 @@ namespace SeccionFundamentos
     {
         static void Main(string[] args)
         {
-            FundamentosStringBuilder();
+            FundamentosChar();
             Console.Read();
         }
 
@@ -144,6 +144,30 @@ namespace SeccionFundamentos
             Console.WriteLine($"Tiempo {tiempo.Elapsed.TotalMilliseconds} ms");
 
         
+        }
+
+        static void FundamentosChar()
+        {
+            var caracter = "D";
+
+            char.IsLetterOrDigit(' ');
+            char.IsLetter(' ');
+            char.IsDigit(' ');
+            char.IsWhiteSpace(' ');
+            char.IsPunctuation(' ');
+
+            var oracion = "Esta es$$ una (98) prueba";
+            var oracionSB = new StringBuilder();
+
+            foreach(var item in oracion)
+            {
+                if (char.IsLetter(item) || char.IsWhiteSpace(item)) {
+
+                    oracionSB.Append(item);
+                }
+            }
+
+            var oracionLimpia = oracionSB.ToString();
         }
     }
 }
