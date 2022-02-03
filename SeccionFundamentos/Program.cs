@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,7 @@ namespace SeccionFundamentos
     {
         static void Main(string[] args)
         {
-            FundamentosString6();
+            FundamentosStringBuilder();
             Console.Read();
         }
 
@@ -88,6 +89,61 @@ namespace SeccionFundamentos
             var frase1 = string.Format("{0} Nacido el año {1} en el pais {2}", nombre, anio, pais);
             var frase2 = $"{nombre} nacido el año {anio} en el pais {pais}";
 
+        }
+
+        static void FundamentosString7()
+        {
+            var str1 = "";
+            var str2 = string.Empty;
+
+            string str3 = null;
+            var str4 = "    ";
+
+            Console.WriteLine(string.IsNullOrEmpty(str1));
+            Console.WriteLine(string.IsNullOrEmpty(str2));
+            Console.WriteLine(string.IsNullOrEmpty(str3));
+            Console.WriteLine(string.IsNullOrEmpty(str4));
+            Console.WriteLine(string.IsNullOrWhiteSpace(str4));
+        }
+
+        static void FundamentosStringBuilder()
+        {
+
+            var stringBuilder = new StringBuilder();
+
+            stringBuilder.Append("mi frase");
+            stringBuilder.AppendLine("Mi nueva linea");
+            stringBuilder.AppendFormat("{0}, {1}, {2}", "Elefante", "Tigre", "Leon");
+            stringBuilder.Insert(8, "\n");
+            stringBuilder[0] = 'M';
+
+            var stringFinal = stringBuilder.ToString();
+
+            Console.Read();
+
+            var tiempo = new Stopwatch();
+            var str = string.Empty;
+            var strSB = new StringBuilder();
+
+            tiempo.Start();
+            for (int i = 0; i < 100000; i++)
+            {
+                str += i.ToString();
+            }
+            tiempo.Stop();
+            Console.WriteLine($"Tiempo {tiempo.Elapsed.TotalMilliseconds} ms");
+
+            tiempo.Reset();
+
+            tiempo.Start();
+            for (int i = 0; i < 100000; i++)
+            {
+                strSB.Append(i.ToString());
+            }
+            tiempo.Stop();
+            Console.WriteLine($"Tiempo {tiempo.Elapsed.TotalMilliseconds} ms");
+
+        
         }
     }
 }

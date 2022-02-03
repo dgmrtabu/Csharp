@@ -5,3 +5,10 @@ C:\Users\david.montano\Documents\Desarrollo\C Sharp\SeccionFundamentos\SeccionFu
 C:\Users\david.montano\Documents\Desarrollo\C Sharp\SeccionFundamentos\SeccionFundamentos\obj\Debug\SeccionFundamentos.csproj.CoreCompileInputs.cache
 C:\Users\david.montano\Documents\Desarrollo\C Sharp\SeccionFundamentos\SeccionFundamentos\obj\Debug\SeccionFundamentos.exe
 C:\Users\david.montano\Documents\Desarrollo\C Sharp\SeccionFundamentos\SeccionFundamentos\obj\Debug\SeccionFundamentos.pdb
+C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\SeccionFundamentos\bin\Debug\SeccionFundamentos.exe.config
+C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\SeccionFundamentos\bin\Debug\SeccionFundamentos.exe
+C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\SeccionFundamentos\bin\Debug\SeccionFundamentos.pdb
+C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\SeccionFundamentos\obj\Debug\SeccionFundamentos.csproj.AssemblyReference.cache
+C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\SeccionFundamentos\obj\Debug\SeccionFundamentos.csproj.CoreCompileInputs.cache
+C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\SeccionFundamentos\obj\Debug\SeccionFundamentos.exe
+C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\SeccionFundamentos\obj\Debug\SeccionFundamentos.pdb
