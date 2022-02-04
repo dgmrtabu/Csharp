@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +12,7 @@ namespace SeccionFundamentos
     {
         static void Main(string[] args)
         {
-            FundamentosChar();
+            FundamentosNumeros3();
             Console.Read();
         }
 
@@ -145,7 +146,6 @@ namespace SeccionFundamentos
 
         
         }
-
         static void FundamentosChar()
         {
             var caracter = "D";
@@ -168,6 +168,44 @@ namespace SeccionFundamentos
             }
 
             var oracionLimpia = oracionSB.ToString();
+        }
+
+        static void FundamentosNumeros1()
+        {
+            var numero = 0;
+            //Console.WriteLine(++numero);
+            //Console.WriteLine(numero++);
+
+            var num = ++numero;
+            //var num = ++numero;
+
+            Console.WriteLine(num);
+        }
+
+        static void FundamentosNumeros2()
+        {
+            var num1 = 1234.56789m;
+
+            Console.WriteLine(num1.ToString("N0"));
+            Console.WriteLine(num1.ToString("N1"));
+            Console.WriteLine(num1.ToString("N2"));
+            Console.WriteLine(num1.ToString("N3"));
+
+            var num2 = 125000;
+
+            Console.WriteLine(num2.ToString("N0"));
+
+
+        }
+
+        static void FundamentosNumeros3()
+        {
+            var num1 = int.Parse("123.456", NumberStyles.AllowThousands, new CultureInfo("es-cl"));
+            var num2 = int.Parse("$123.456", NumberStyles.AllowThousands | NumberStyles.AllowCurrencySymbol, new CultureInfo("es-cl"));
+            var num3 = int.Parse("123,456", NumberStyles.AllowThousands, new CultureInfo("en-us"));
+
+            //var num4 = 0;
+            var pudoTransformar = int.TryParse("123.456", NumberStyles.AllowThousands, new CultureInfo("es-cl"), out var num4);
         }
     }
 }
