@@ -12,7 +12,7 @@ namespace SeccionFundamentos
     {
         static void Main(string[] args)
         {
-            FundamentosNumeros3();
+            FundamentosNumeros5();
             Console.Read();
         }
 
@@ -206,6 +206,34 @@ namespace SeccionFundamentos
 
             //var num4 = 0;
             var pudoTransformar = int.TryParse("123.456", NumberStyles.AllowThousands, new CultureInfo("es-cl"), out var num4);
+        }
+
+        static void FundamentosNumeros4()
+        {
+            var num1 = 125.6475;
+
+            Console.WriteLine(Math.Round(num1));
+            Console.WriteLine(Math.Round(num1, 1));
+            Console.WriteLine();
+            Console.WriteLine(Math.Truncate(num1));
+            Console.WriteLine(Math.Floor(num1));
+            Console.WriteLine();
+            Console.WriteLine(Math.Truncate(-4.0001m));
+            Console.WriteLine(Math.Floor(-4.0001m));
+            Console.WriteLine();
+            Console.WriteLine(Math.Ceiling(num1));
+
+        }
+
+        static void FundamentosNumeros5()
+        {
+            var numDouble = 0.1d;
+            var resultMultiplicacionDouble = numDouble * 10;
+            var resultSumaDouble = numDouble + numDouble + numDouble + numDouble + numDouble + numDouble + numDouble + numDouble + numDouble + numDouble;
+
+            var numDecimal = 0.1m;
+            var resultMultiplicacionDecimal = numDecimal * 10;
+            var resultSumaDecimal = numDecimal + numDecimal + numDecimal + numDecimal + numDecimal + numDecimal + numDecimal + numDecimal + numDecimal + numDecimal;
         }
     }
 }
