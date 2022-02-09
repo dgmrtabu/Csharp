@@ -10,9 +10,11 @@ namespace SeccionFundamentos
 {
     class Program
     {
+        public static object DataTime { get; private set; }
+
         static void Main(string[] args)
         {
-            FundamentosNumeros5();
+            FundamentosTiposAnonimos();
             Console.Read();
         }
 
@@ -76,7 +78,7 @@ namespace SeccionFundamentos
         {
             var animales = "TIGRE/ELEFANTE-LEON-MUCIELAGO-/-TORTUGA";
 
-            var arreglo1 = animales.Split('-','/');
+            var arreglo1 = animales.Split('-', '/');
             var arreglo2 = animales.Split(new char[] { '-', '/' }, StringSplitOptions.RemoveEmptyEntries);
 
             var animalesSeparadosPorComa = string.Join("\n", arreglo2);
@@ -144,7 +146,7 @@ namespace SeccionFundamentos
             tiempo.Stop();
             Console.WriteLine($"Tiempo {tiempo.Elapsed.TotalMilliseconds} ms");
 
-        
+
         }
         static void FundamentosChar()
         {
@@ -159,7 +161,7 @@ namespace SeccionFundamentos
             var oracion = "Esta es$$ una (98) prueba";
             var oracionSB = new StringBuilder();
 
-            foreach(var item in oracion)
+            foreach (var item in oracion)
             {
                 if (char.IsLetter(item) || char.IsWhiteSpace(item)) {
 
@@ -235,5 +237,151 @@ namespace SeccionFundamentos
             var resultMultiplicacionDecimal = numDecimal * 10;
             var resultSumaDecimal = numDecimal + numDecimal + numDecimal + numDecimal + numDecimal + numDecimal + numDecimal + numDecimal + numDecimal + numDecimal;
         }
+
+        static void FundamentosFecha1()
+        {
+            var fechaHoraHoy = DateTime.Now;
+            var fechaHoy = DateTime.Today;
+            var fechaMinima = DateTime.MinValue;
+            var fechaMaxima = DateTime.MaxValue;
+            var diaAnio = fechaHoy.DayOfYear;
+            var diaSemana = fechaHoraHoy.DayOfWeek;
+            var fecha1 = new DateTime(2020, 1, 1);
+
+            var fechaTicMinima = DateTime.MinValue.Ticks;
+            var fechaTicMaxima = DateTime.MaxValue.Ticks;
+
+            var calcularTick = (10000000l * 60 * 60 * 24 * 365 * 1999) + (10000000l * 60 * 60 * 24 * (499 - 19 + 4));
+            var fechaTicks = new DateTime(calcularTick);
+
+        }
+
+        static void FundamentosFecha2()
+        {
+
+            var fechaHoy = DateTime.Now;
+            var fechaAddDay = fechaHoy.AddDays(1);
+            var fechaAddMes = fechaHoy.AddMonths(1);
+            var fechaAddAnios = fechaHoy.AddYears(1);
+
+            var dias = DateTime.DaysInMonth(2022, 2);
+
+            var finDeMes = new DateTime(2022, 2, DateTime.DaysInMonth(2022, 2));
+
+            Console.WriteLine(finDeMes.ToString("dd-MM-yyyy"));
+            Console.WriteLine(finDeMes.ToString("dddd, dd MMMM yyyy", new CultureInfo("es-cl")));
+            Console.WriteLine(finDeMes.ToString("dddd, dd MMMM yyyy", new CultureInfo("en-us")));
+        }
+
+        static void FundamentosFecha3()
+        {
+            var fecha1 = new DateTime(2022, 1, 1);
+
+            var time = new TimeSpan(30, 20, 15);
+
+            var fechaResultado = fecha1.Add(time);
+
+            Console.WriteLine(fechaResultado);
+
+            var fechaDif1 = new DateTime(2022, 1, 1);
+            var fechaDif2 = new DateTime(2022, 1, 7, 12, 30, 0);
+
+            var diferencia = fechaDif2.Subtract(fechaDif1);
+
+            fechaDif1 += diferencia;
+
+        }
+
+        static void FundamentosFecha4(){
+
+            var strFecha = "31-12-2000";
+            var strFecha2 = "2000-01-01";
+
+            string[] formatos = { "dd-MM-yyyy", "yyyy-MM-dd" };
+            var esValido = DateTime.TryParseExact(strFecha2, formatos, new CultureInfo("es-cl"), DateTimeStyles.None, out var fecha);
+            if (esValido)
+            {
+                Console.WriteLine(fecha);
+            }
+            else
+            {
+                Console.WriteLine("La transformacion no se p[udo realizar!!!");
+            }
+        }
+
+        static void FundamentosGuid()
+        {
+            var variable1 = new Guid();
+            var variable2 = Guid.NewGuid();
+            var variable3 = new Guid("973e8457-6a1e-427f-87cf-b6f46a969d56");
+        }
+
+        static void FundamentosVariablesNulas()
+        {
+            //string cadena;
+            //int num;
+            //DateTime fecha;
+            //Guid id;
+
+            //Nullable<int> num;
+            //Nullable<DateTime> fecha;
+            //Nullable<Guid> id;
+
+            int? num = null;
+            DateTime? fecha = null;
+            Guid? id = null;
+
+            Console.WriteLine($"{num.HasValue}-- >{num.GetValueOrDefault()}");
+            Console.WriteLine($"{fecha.HasValue}-- >{fecha.GetValueOrDefault()}");
+            Console.WriteLine($"{id.HasValue}-- >{id.GetValueOrDefault()}");
+
+            if (num.HasValue)
+            {
+                // Realiza accciones
+            }
+
+        }
+
+        static void FundamentosTuble()
+        {
+            var tubla1 = Tuple.Create(1, "Esto es una cadena");
+            var tubla2 = Tuple.Create(1, 2, true, false, new DateTime(), new DateTime(2022,1,1), string.Empty, "");
+            var tubla3 = Tuple.Create(1, 2, true, false, new DateTime(), new DateTime(2022,1,1), string.Empty, Tuple.Create(1, 2, true, false, new DateTime(), new DateTime(2022, 1, 1), string.Empty, ""));
+
+        }
+
+        static void FundamentosValueTuble()
+        {
+            ValueTuple<int, int> tupla1 = (1, 2);
+            (int, int) tupla2 = (1, 2);
+            var tupla3 = (1, 2);
+            var tupla4 = (1, 2, true, false, new DateTime(), new DateTime(2022, 1, 1), string.Empty, "",1,2,3,4,5,6,7);
+            var personaje = (1, "Hari", "Seldon", new DateTime(2500, 1, 1));
+
+            (int Id, string Nombre, string Apellido, DateTime FechaNacimiento) datosPersona1 = (1, "Isaac", "Asimov", new DateTime(1920, 1, 2));
+            
+            var datosPersona2  = (Id: 1, Nombre: "Dan", Apellido: "Simons", FechaNacimiento: new DateTime(1920, 1, 2));
+
+            var lista = new List<(int Identificador, string Nombre, string ApellidoPaterno, DateTime Fecha)> { datosPersona1, datosPersona2, personaje };
+
+            var apellidoP1 = lista[0].ApellidoPaterno;
+            var apellidoP2 = lista[1].ApellidoPaterno;
+            var apellidoP3 = lista[2].ApellidoPaterno;
+
+
+        }
+
+        static void FundamentosTiposAnonimos()
+        {
+            var tipoAnonimo = new { Id = 1, Nombre = "Isaac", Apellido = "Paterno", FechaNacimiento = new DateTime(1920, 1, 2) };
+
+            var listaTipoAnonimo = new[]
+            {
+                new { Id = 1, Nombre = "Isaac", Apellido = "Paterno", FechaNacimiento = new DateTime(1920, 1, 2) }
+            }.ToList();
+
+
+        }
     }
+
 }
