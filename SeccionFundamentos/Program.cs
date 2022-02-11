@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
@@ -14,7 +15,7 @@ namespace SeccionFundamentos
 
         static void Main(string[] args)
         {
-            FundamentosTiposAnonimos();
+            ArraryListOtros();
             Console.Read();
         }
 
@@ -381,6 +382,103 @@ namespace SeccionFundamentos
             }.ToList();
 
 
+        }
+
+        static void ArraryListAgregar()
+
+        {
+            var arrayList1 = new ArrayList() { 1, "Mi Cadena", new DateTime(2020,1,1), 125.45m, Guid.NewGuid() };
+
+            var arrayList2 = new ArrayList();
+
+            arrayList2.Add(1);
+            arrayList2.Add("Mi Cadena");
+            arrayList2.Add(new DateTime(2020,1,1));
+            arrayList2.Add(125.45m);
+            arrayList2.Add(Guid.NewGuid());
+
+            var arrayList3 = new ArrayList() { "A", "B", "C" };
+            arrayList3.AddRange(arrayList2);
+
+            var arrayList4 = new ArrayList() { "A", "B", "C" };
+            arrayList4.Insert(1, 1);
+            
+            var arrayList5 = new ArrayList() { "A", "B", "C" };
+            arrayList5.InsertRange(1, arrayList2);
+        }
+
+        static void ArraryListEliminar() {
+            var arrayList1 = new ArrayList() { 1, "Mi Cadena", new DateTime(2020, 1, 1), 125.45m, Guid.NewGuid() };
+            arrayList1.Remove("Mi Cadena");
+
+            var arrayList2 = new ArrayList() { 1, "Mi Cadena", new DateTime(2020, 1, 1), 125.45m, Guid.NewGuid() };
+            arrayList2.RemoveAt(2);
+            
+            var arrayList3 = new ArrayList() { 1, "Mi Cadena", new DateTime(2020, 1, 1), 125.45m, Guid.NewGuid() };
+            arrayList3.RemoveRange(1, 3);
+            arrayList3.Clear();
+
+        }
+
+        static void ArraryListAcceder()
+        {
+            var arrayList1 = new ArrayList() { 1, "Mi Cadena", new DateTime(2020, 1, 1), 125.45m, Guid.NewGuid() };
+
+            var primerElemento = (int)arrayList1[0];
+            var segundoElemento = (string)arrayList1[1];
+            var tercerElemento = (DateTime)arrayList1[2];
+            var tercerElemento2 = arrayList1[2];
+
+        }
+
+        static void ArraryListInteraccion() {
+
+            var arrayList1 = new ArrayList() { 1, "Mi Cadena", new DateTime(2020, 1, 1), 125.45m, Guid.NewGuid() };
+            foreach ( var item in arrayList1)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+
+            for(int i =0; i< arrayList1.Count; i++)
+            {
+                Console.WriteLine(arrayList1[i]);
+            }
+
+        }
+
+        static void ArraryListOtros()
+        {
+            var arrayList1 = new ArrayList() { 1, "Mi Cadena", new DateTime(2020, 1, 1), 125.45m, Guid.NewGuid() };
+
+            Console.WriteLine($"Contiene un 1: { arrayList1.Contains(1)}");
+            Console.WriteLine($"Contiene un 100: { arrayList1.Contains(100)}");
+            Console.WriteLine($"Contiene fecha '2020-01-01': { arrayList1.Contains(new DateTime(2020,1,1))}");
+            Console.WriteLine($"Contiene fecha '2020-01-02': { arrayList1.Contains(new DateTime(2020,1,2))}");
+            Console.WriteLine();
+            Console.WriteLine();
+
+            arrayList1.Reverse();
+
+            foreach( var item in arrayList1)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine();
+            Console.WriteLine();
+
+            var arrayList2 = new ArrayList() { "Z", "X", "C", "B", "A" };
+
+            arrayList2.Sort();
+
+            foreach( var item in arrayList2)
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 
