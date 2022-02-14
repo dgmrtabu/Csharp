@@ -15,7 +15,7 @@ namespace SeccionFundamentos
 
         static void Main(string[] args)
         {
-            ArraryListOtros();
+            SortedListGenerico();
             Console.Read();
         }
 
@@ -480,6 +480,185 @@ namespace SeccionFundamentos
                 Console.WriteLine(item);
             }
         }
+
+        static void SortedListAgregar()
+        {
+            var sortedList1 = new SortedList() { { 2, "Dos" }, { 1, "Uno" }, { 3, "Tres" } };
+
+            var sortedList2 = new SortedList();
+            sortedList2.Add(500, new DateTime(2022, 1, 1));
+            sortedList2.Add(15, new DateTime(2022, 1, 2));
+            sortedList2.Add(5, new DateTime(2022, 1, 2));
+            sortedList2.Add(25, new DateTime(2022, 1, 2));
+            sortedList2.Add(50, new DateTime(2022, 1, 2));
+            sortedList2.Add(10, new DateTime(2022, 1, 3));
+            //sortedList2.Add(10, new DateTime(2022, 1, 3));
+            //sortedList2.Add("100", new DateTime(2022, 1, 3));
+
+            var sortedList3 = new SortedList();
+            sortedList3.Add("Patricio", 1);
+            sortedList3.Add("Jorge", Guid.NewGuid());
+            sortedList3.Add("Alex", new DateTime(2022,1,2));
+
+            var sortedList4 = new SortedList()
+            {
+                { 2, 1500 },
+                { 4, 1500 },
+                { 1, 1500 },
+                { 3, 1500 },
+            };
+
+            var sortedList5 = new SortedList()
+            {
+                {"1",1 },
+                {"2",Guid.NewGuid() },
+                {"tres","Mi cadena" },
+                {"cuatro",new DateTime(2022,1,1) },
+            };
+
+            
+        }
+
+        static void SortedListEliminacion()
+        {
+            var sortedList1 = new SortedList()
+            {
+                { 2, 150 },
+                { 4, 1500 },
+                { 1, 250 },
+                { 3, 300 },
+                { 7, 400 },
+                { 8, 1000 },
+                { 10, 90 },
+            };
+
+            sortedList1.Remove(4);
+
+            var sortedList2 = new SortedList()
+            {
+                { 2, 150 },
+                { 4, 1500 },
+                { 1, 250 },
+                { 3, 300 },
+                { 7, 1000 },
+                { 8, 90 },
+                { 10, 400 },
+            };
+
+            sortedList2.RemoveAt(4);
+        }
+
+        static void SortedListAcceso()
+
+
+        {
+            var sortedList1 = new SortedList()
+            {
+                {2, new DateTime(1920,1,1) },
+                {4, new DateTime(1940,1,1) },
+                {1, new DateTime(1910,1,1) },
+                {3, new DateTime(1930,1,1) },
+                {7, new DateTime(1970,1,1) },
+                {8, new DateTime(1980,1,1) },
+                {10, new DateTime(2000,1,1) },
+            };
+
+            var fecha1 = (DateTime)sortedList1[10]; //Obtener valor por llave
+            var fecha2 = sortedList1.GetByIndex(0); //Obtener valor por indice
+            var key = sortedList1.GetKey(0); //Obtener llave por indice
+        }
+
+        static void SortedListComprobar()
+        {
+            var sortedList1 = new SortedList()
+            {
+                {2, new DateTime(1920,1,1) },
+                {4, new DateTime(1940,1,1) },
+                {1, new DateTime(1910,1,1) },
+                {3, new DateTime(1930,1,1) },
+                {7, new DateTime(1970,1,1) },
+                {8, new DateTime(1980,1,1) },
+                {10, new DateTime(2000,1,1) },
+            };
+
+            var contiene_2 = sortedList1.Contains(2); //Existe
+            var contiene_6 = sortedList1.Contains(6); //No Existe
+
+            var contieneKey_4 = sortedList1.ContainsKey(2); //Existe
+            var contieneKey_6 = sortedList1.ContainsKey(6); //No Existe
+
+            var contieneValor_Fecha = sortedList1.ContainsValue(new DateTime(1920, 1, 1)); //Existe
+            var contieneValor_Otro = sortedList1.ContainsValue("Otro"); //No Existe
+        }
+
+        static void SortedListCiclos()
+        {
+            var sortedList1 = new SortedList()
+            {
+                {2, new DateTime(1920,1,1) },
+                {4, new DateTime(1940,1,1) },
+                {1, new DateTime(1910,1,1) },
+                {3, new DateTime(1930,1,1) },
+                {7, new DateTime(1970,1,1) },
+                {8, new DateTime(1980,1,1) },
+                {10, new DateTime(2000,1,1) },
+            };
+
+            Console.WriteLine($"---------- For1 ----------");
+            for(int i = 0; i< sortedList1.Count; i++)
+            {
+                Console.WriteLine($"Key: {sortedList1.GetKey(i)}, valor: {sortedList1.GetByIndex(i)}");
+            }
+            Console.WriteLine();
+            Console.WriteLine($"---------- For2 ----------");
+            for (int i = 0; i < sortedList1.Count; i++)
+            {
+                Console.WriteLine($"Key: {sortedList1.GetKey(i)}, valor: {sortedList1[sortedList1.GetKey(i)]}");
+            }
+            Console.WriteLine();
+            Console.WriteLine($"---------- ForEach ----------");
+            foreach(DictionaryEntry item in sortedList1)
+            {
+                Console.WriteLine($"key:{ item.Key}, valor: {item.Value}");
+            }
+
+            var listaKey = sortedList1.GetKeyList();
+            Console.WriteLine();
+            Console.WriteLine($"Lista key");
+            foreach(var item in listaKey)
+            {
+                Console.WriteLine($"Key:{ item }");
+            }
+
+            var listaValores = sortedList1.GetValueList();
+            Console.WriteLine();
+            Console.WriteLine($"Lista Valores");
+            foreach(var item in listaValores)
+            {
+                Console.WriteLine($"Valores:{ item}");
+            }
+
+        }
+
+        static void SortedListGenerico()
+        {
+            var lista = new System.Collections.Generic.SortedList<int, string>();
+            lista.Add(80, "Mi cadena ochenta");
+            lista.Add(20, "Mi cadena veinte");
+            lista.Add(30, "Mi cadena treinta");
+
+            var miStr = lista[20];
+            lista.Remove(50);
+
+            var listaKeys = lista.Keys;
+            var listaValores = lista.Keys;
+
+            foreach(var item in lista)
+            {
+                Console.WriteLine($"key:{item.Key}, valor{item.Value}");
+            }
+        }
+
     }
 
 }
