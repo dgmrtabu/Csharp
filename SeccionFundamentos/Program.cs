@@ -15,7 +15,7 @@ namespace SeccionFundamentos
 
         static void Main(string[] args)
         {
-            SortedListGenerico();
+            HashTableCiclos();
             Console.Read();
         }
 
@@ -659,6 +659,123 @@ namespace SeccionFundamentos
             }
         }
 
+        static void HashtableAgregar()
+        {
+            var hashTable1 = new Hashtable() { { 2, "Dos" }, { 1, "Uno" }, { 3, "Tres" } };
+
+            var hasTable2 = new Hashtable();
+            hasTable2.Add(500, new DateTime(2022, 1, 1));
+            hasTable2.Add("15", new DateTime(2022, 1, 2));
+            hasTable2.Add(15, new DateTime(2022, 1, 2));
+            hasTable2.Add("1", "Uno");
+
+            var hasTable3 = new Hashtable();
+            hasTable3.Add(DateTime.Today, 1);
+            hasTable3.Add("Jorge", Guid.NewGuid());
+            hasTable3.Add("Alex", new DateTime(2022,1,2));
+
+            var hasTable4 = new Hashtable()
+            {
+                {1,1},
+                {2,Guid.NewGuid()},
+                {"tres", "Mi cadena"},
+                {"cuatro", new DateTime(2022,1,1)},
+            };
+
+        }
+
+        static void HashtableEliminacion() {
+
+            var hasTable1 = new Hashtable()
+            {
+                { "2", 150 },
+                { 2, new DateTime(2022, 1, 1)},
+                {"tres", "Mi cadena"},
+                {1, Guid.NewGuid()},
+                {125m, 12.5m},
+                {"Nombre", null},
+            };
+
+            hasTable1.Remove(4);
+            hasTable1.Remove(1);
+            hasTable1.Remove("tres");
+            hasTable1.Clear();
+
+        }
+
+        static void HashTableAcceso() {
+
+            var hashTable1 = new Hashtable()
+            {
+                { "2", 150 },
+                { 2, new DateTime(2022, 1, 1)},
+                {"tres", "Mi cadena"},
+                {1, Guid.NewGuid()},
+                {125m, 12.5m},
+                {"Nombre", null},
+            };
+
+            var num1 = (int)hashTable1["2"];
+            var fecha = (DateTime)hashTable1[2];
+            var decimal1 = (decimal)hashTable1[125m];
+        }
+
+        static void HashTableComprobar()
+        {
+            var hashTable1 = new Hashtable()
+            {
+                { "2", 150 },
+                { 2, new DateTime(2022, 1, 1)},
+                {"tres", "Mi cadena"},
+                {1, Guid.NewGuid()},
+                {125m, 12.5m},
+                {"Nombre", null},
+            };
+
+            var contiene_2 = hashTable1.Contains(2); //Retorna true
+            var contiene_6 = hashTable1.Contains(6); //Retorna false
+
+            var contieneKey_2 = hashTable1.ContainsKey(2); //Retorna true
+            var contieneKey_6 = hashTable1.ContainsKey(6); //Retorna false
+
+            var contieneValor_Fecha = hashTable1.ContainsValue(new DateTime(2022,1,1)); //Retorna true
+            var contieneValor_Otro = hashTable1.ContainsValue("Otro"); //Retorna false
+
+        }
+        static void HashTableCiclos() {
+            var hastTable1 = new Hashtable()
+            {
+                { "2", 150 },
+                { 2, new DateTime(2022, 1, 1)},
+                {"tres", "Mi cadena"},
+                {1, Guid.NewGuid()},
+                {125m, 12.5m},
+                {"Nombre", null},
+            };
+
+            Console.WriteLine();
+            Console.WriteLine($"---------- ForEach ----------");
+            foreach(DictionaryEntry item in hastTable1)
+            {
+                Console.WriteLine($"key: {item.Key }, valor: {item.Value}");
+            }
+
+            var listaKey = hastTable1.Keys;
+            Console.WriteLine();
+            Console.WriteLine($"Lista Key");
+            foreach (var item in listaKey)
+            {
+                Console.WriteLine($"key: {item}");
+            }
+
+            var listaValores = hastTable1.Values;
+            Console.WriteLine();
+            Console.WriteLine($"Lista Valores");
+            foreach (var item in listaValores)
+            {
+                Console.WriteLine($"Valores: {item}");
+            }
+        }
     }
 
 }
