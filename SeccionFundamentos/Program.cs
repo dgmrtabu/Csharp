@@ -15,7 +15,7 @@ namespace SeccionFundamentos
 
         static void Main(string[] args)
         {
-            QueueGenerico();
+            ListaCiclos();
             Console.Read();
         }
 
@@ -871,7 +871,6 @@ namespace SeccionFundamentos
             stack1.Pop();
             var primeroPila = stack1.Peek();
         }
-
         static void QueueAgregar()
         {
             var queue1 = new Queue();
@@ -883,7 +882,6 @@ namespace SeccionFundamentos
             queue1.Enqueue(125m);
 
         }
-
         static void QueueEliminar()
         {
             var queue1 = new Queue();
@@ -903,7 +901,6 @@ namespace SeccionFundamentos
 
             queue1.Clear();
         }
-
         static void QueueComprobar() {
             var queue1 = new Queue();
 
@@ -960,6 +957,204 @@ namespace SeccionFundamentos
             queue1.Enqueue(5);
             queue1.Dequeue();
             var primeroPila = queue1.Peek();
+        }
+
+        static void DiccionarioAgregar()
+        {
+            var dicionario1 = new Dictionary<int, string>()
+            {
+
+                { 2,"Dos"},
+                { 1,"Uno"},
+                { 3,"Tres"},
+
+            };
+
+            var dicionario2 = new Dictionary<int, string>()
+            {
+
+                [2] = "Dos",
+                [1] = "Uno",
+                [3] = "Tres",
+                
+            };
+
+            var diccionario3 = new Dictionary<int, DateTime> ();
+            diccionario3.Add(1920, new DateTime(1920, 5, 1));
+            diccionario3.Add(1950, new DateTime(1950, 5, 1));
+            diccionario3.Add(1980, new DateTime(1980, 5, 1));
+            diccionario3.Add(2010, new DateTime(2010, 5, 1));
+            //diccionario3.Add(2010, new DateTime(1, 1, 1));
+        }
+
+        static void DiccionarioEliminacion()
+        {
+            var diccionario1 = new Dictionary<string, int>()
+            {
+                ["Dos"] = 2,
+                ["Uno"] = 1,
+                ["Tres"] = 3,
+                ["Numero"] = 5,
+            };
+
+            var elimnacion1 = diccionario1.Remove("Cuatro");
+            var elimnacion2 = diccionario1.Remove("Uno");
+
+            diccionario1.Clear();
+        }
+        static void DiccionarioAcceso()
+        {
+            var diccionario1 = new Dictionary<string, int>()
+            {
+                ["Dos"] = 2,
+                ["Uno"] = 1,
+                ["Tres"] = 3,
+                ["Numero"] = 5,
+            };
+
+            var num1 = diccionario1["Dos"];
+            var num2 = diccionario1["Numero"];
+        }
+
+        static void DiccionarioComprobar()
+        {
+            var diccionario1 = new Dictionary<string, int>()
+            {
+                ["Dos"] = 2,
+                ["Uno"] = 1,
+                ["Tres"] = 3,
+                ["Numero"] = 5,
+            };
+
+            var contiene_1 = diccionario1.Contains(new KeyValuePair<string, int> ("Dos", 2)); //Devuelve true
+            var contiene_2 = diccionario1.Contains(new KeyValuePair<string, int> ("Numero", 4)); //Devuelve false
+
+            var contieneKey_2 = diccionario1.ContainsKey("Dos");
+            var contieneKey_4 = diccionario1.ContainsKey("Cuatro");
+
+            var contieneValor_5 = diccionario1.ContainsValue(5);
+            var contieneValor_4 = diccionario1.ContainsValue(4);
+
+        }
+
+        static void DiccionarioCiclos()
+        {
+            var diccionario1 = new Dictionary<string, int>()
+            {
+                ["Dos"] = 2,
+                ["Uno"] = 1,
+                ["Tres"] = 3,
+                ["Numero"] = 5,
+            };
+
+            Console.WriteLine();
+            Console.WriteLine("---------- Foreach ----------");
+            foreach (var item in diccionario1)
+            {
+                Console.WriteLine($"Key: {item.Key}, valor: {item.Value}");
+            }
+
+            var listaKey = diccionario1.Keys;
+            Console.WriteLine();
+            Console.WriteLine($"Lista Key");
+            foreach (var item in listaKey)
+            {
+                Console.WriteLine($"Key: {item}");
+            }
+
+            var listaValores = diccionario1.Values;
+            Console.WriteLine();
+            Console.WriteLine($"Lista Valores");
+            foreach (var item in listaValores)
+            {
+                Console.WriteLine($"Valores: {item}");
+            }
+        }
+
+        static void DiccionarioOrdenando()
+        {
+            var diccionario1 = new Dictionary<string, int>()
+            {
+                ["Dos"] = 2,
+                ["Uno"] = 1,
+                ["Tres"] = 3,
+                ["Numero"] = 5,
+            };
+
+            diccionario1.Add("Diez", 10);
+
+            var valor = diccionario1["numero"];
+            var contiene_1 = diccionario1.Contains(new KeyValuePair<string, int>("Dos", 2));
+            var contieneKey_2 = diccionario1.ContainsKey("Dos");
+            var contieneValor_4 = diccionario1.ContainsValue(4);
+        }
+        static void ListaAgregar()
+        {
+            var lista1 = new List<int>() { 1, 2, 3, 4, 5 };
+            
+            var lista2 = new List<string>() { "Unos", "Dos", "Tres" };
+
+            var lista3 = new List<int>();
+            lista3.Add(25);
+            lista3.Add(50);
+            lista3.Add(100);
+            lista3.AddRange(lista1);
+
+            var lista4 = new List<int>();
+            lista4.Add(10);
+            lista4.Add(1000);
+            lista4.Insert(1,100);
+
+            var lista5 = new List<int>();
+            lista5.Add(10);
+            lista5.Add(1000);
+            lista5.InsertRange(1, lista1);
+        }
+        static void ListaEliminacion() {
+            var lista1 = new List<int>() { 1, 2, 3, 4, 5 };
+            var eliminacion1 = lista1.Remove(3);
+
+            var lista2 = new List<int>() { 1, 2, 3, 4, 5 };
+            lista2.RemoveAt(4);
+
+            var lista3 = new List<int>() { 1, 2, 3, 4, 5 };
+            lista3.RemoveRange(1, 2);
+            
+            var lista4 = new List<int>() { 1, 2, 3, 4, 5 };
+            lista4.Clear();
+        }
+        static void ListaAcceso() 
+        {
+            var lista1 = new List<int>() { 1, 2, 3, 4, 5 };
+            var num1 = lista1[2];
+            var totalElementos = lista1.Count;
+        }
+        static void ListaComprobar() 
+        {
+            var lista1 = new List<int>() { 1, 2, 3, 4, 5 };
+            var contiene_1 = lista1.Contains(3); // Devuelve true
+            var contiene_2 = lista1.Contains(10); // Devuelve false
+        }
+        static void ListaCiclos() 
+        {
+            var lista1 = new List<int>() { 1, 2, 3, 4, 5 };
+
+            Console.WriteLine($"---------- For ----------");
+            for (int i = 0; i < lista1.Count; i++)
+            {
+                Console.WriteLine(lista1[i]);
+            }
+            Console.WriteLine();
+            Console.WriteLine($"---------- Foreach ----------");
+            foreach (var item in lista1)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine("---------- ListaForEach ----------");
+            lista1.ForEach(item =>
+            {
+                Console.WriteLine($"{item}");
+            });
         }
 
     }
