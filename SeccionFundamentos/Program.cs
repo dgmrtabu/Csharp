@@ -15,7 +15,7 @@ namespace SeccionFundamentos
 
         static void Main(string[] args)
         {
-            HashTableCiclos();
+            QueueGenerico();
             Console.Read();
         }
 
@@ -776,6 +776,192 @@ namespace SeccionFundamentos
                 Console.WriteLine($"Valores: {item}");
             }
         }
+
+        static void StackAgregar()
+        {
+            var stack1 = new Stack();
+
+            stack1.Push("Mi Cadena");
+            stack1.Push(1);
+            stack1.Push(Guid.NewGuid());
+            stack1.Push(new DateTime(2022, 1, 1));
+            stack1.Push(125m);
+        }
+
+        static void StackEliminar()
+        {
+            var stack1 = new Stack();
+
+            stack1.Push("Mi Cadena");
+            stack1.Push(1);
+            stack1.Push(Guid.NewGuid());
+            stack1.Push(new DateTime(2022, 1, 1));
+            stack1.Push(125m);
+
+            var eliminar1 = stack1.Pop();
+            var eliminar2 = stack1.Pop();
+            var eliminar3 = stack1.Pop();
+
+             stack1.Push(new DateTime(1990, 1, 1));
+
+            var eliminar4 = stack1.Pop();
+
+            stack1.Clear();
+        }
+
+        static void StackComprobar()
+        {
+            var stack1 = new Stack();
+
+            stack1.Push("Mi Cadena");
+            stack1.Push(1);
+            stack1.Push(Guid.NewGuid());
+            stack1.Push(new DateTime(2022, 1, 1));
+            stack1.Push(125m);
+
+            var primeroPila = stack1.Peek();
+
+            stack1.Pop();
+            primeroPila = stack1.Peek();
+
+            var contiene_1 = stack1.Contains(1);
+            var contiene_10 = stack1.Contains(10);
+            var cantidad = stack1.Count;
+            
+        }
+
+        static void StackCiclos()
+        {
+            var stack1 = new Stack();
+
+            stack1.Push("Mi Cadena");
+            stack1.Push(1);
+            stack1.Push(Guid.NewGuid());
+            stack1.Push(new DateTime(2022, 1, 1));
+            stack1.Push(125m);
+
+            var stackArray = stack1.ToArray();
+            Console.WriteLine("---------- For ----------");
+            for (int i = 0; i < stackArray.Count(); i++)
+            {
+                Console.WriteLine(stackArray[i]);
+            }
+            Console.WriteLine();
+            Console.WriteLine("---------- Foreach ----------");
+            foreach (var item in stack1)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine("---------- While ----------");
+            while (stack1.Count > 0)
+            {
+                Console.WriteLine(stack1.Pop());
+            }
+        }
+
+        static void StackGenerico()
+        {
+            var stack1 = new System.Collections.Generic.Stack<int>();
+
+            stack1.Push(1);
+            stack1.Push(2);
+            stack1.Push(3);
+            stack1.Push(4);
+            stack1.Push(5);
+            stack1.Pop();
+            var primeroPila = stack1.Peek();
+        }
+
+        static void QueueAgregar()
+        {
+            var queue1 = new Queue();
+
+            queue1.Enqueue("Mi cadena");
+            queue1.Enqueue(1);
+            queue1.Enqueue(Guid.NewGuid());
+            queue1.Enqueue(new DateTime(2022,1,1));
+            queue1.Enqueue(125m);
+
+        }
+
+        static void QueueEliminar()
+        {
+            var queue1 = new Queue();
+
+            queue1.Enqueue("Mi cadena");
+            queue1.Enqueue(1);
+            queue1.Enqueue(Guid.NewGuid());
+            queue1.Enqueue(new DateTime(2022, 1, 1));
+            queue1.Enqueue(125m);
+
+            var eliminar1 = queue1.Dequeue();
+            var eliminar2 = queue1.Dequeue();
+            var eliminar3 = queue1.Dequeue();
+
+            queue1.Enqueue(new DateTime(1990, 1, 1));
+            var eliminar4 = queue1.Dequeue();
+
+            queue1.Clear();
+        }
+
+        static void QueueComprobar() {
+            var queue1 = new Queue();
+
+            queue1.Enqueue("Mi cadena");
+            queue1.Enqueue(1);
+            queue1.Enqueue(Guid.NewGuid());
+            queue1.Enqueue(new DateTime(2022, 1, 1));
+            queue1.Enqueue(125m);
+
+            var primeroCola = queue1.Peek();
+            queue1.Dequeue();
+            primeroCola = queue1.Peek();
+
+            var contiene_1 = queue1.Contains(1);
+            var contiene_10 = queue1.Contains(10);
+            var cantidad = queue1.Count;
+        }
+        static void QueueCiclos() {
+
+            var queue1 = new Queue();
+
+            queue1.Enqueue("Mi cadena");
+            queue1.Enqueue(1);
+            queue1.Enqueue(Guid.NewGuid());
+            queue1.Enqueue(new DateTime(2022, 1, 1));
+            queue1.Enqueue(125m);
+
+            var queuekArray = queue1.ToArray();
+            Console.WriteLine("---------- For ----------");
+            for (int i = 0; i < queuekArray.Count(); i++)
+            {
+                Console.WriteLine(queuekArray[i]);
+            }
+            Console.WriteLine();
+            Console.WriteLine("---------- Foreach ----------");
+            foreach (var item in queue1)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine("---------- While ----------");
+            while (queue1.Count > 0)
+            {
+                Console.WriteLine(queue1.Dequeue());
+            }
+        }
+        static void QueueGenerico() {
+
+            var queue1 = new System.Collections.Generic.Queue<int>();
+
+            queue1.Enqueue(1);
+            queue1.Enqueue(2);
+            queue1.Enqueue(3);
+            queue1.Enqueue(4);
+            queue1.Enqueue(5);
+            queue1.Dequeue();
+            var primeroPila = queue1.Peek();
+        }
+
     }
 
 }
