@@ -1,0 +1,14 @@
+C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\Tips\Tips\Tips\bin\Debug\netcoreapp3.1\Tips.exe
+C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\Tips\Tips\Tips\bin\Debug\netcoreapp3.1\Tips.deps.json
+C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\Tips\Tips\Tips\bin\Debug\netcoreapp3.1\Tips.runtimeconfig.json
+C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\Tips\Tips\Tips\bin\Debug\netcoreapp3.1\Tips.runtimeconfig.dev.json
+C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\Tips\Tips\Tips\bin\Debug\netcoreapp3.1\Tips.dll
+C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\Tips\Tips\Tips\bin\Debug\netcoreapp3.1\Tips.pdb
+C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\Tips\Tips\Tips\obj\Debug\netcoreapp3.1\Tips.csproj.AssemblyReference.cache
+C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\Tips\Tips\Tips\obj\Debug\netcoreapp3.1\Tips.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\Tips\Tips\Tips\obj\Debug\netcoreapp3.1\Tips.AssemblyInfoInputs.cache
+C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\Tips\Tips\Tips\obj\Debug\netcoreapp3.1\Tips.AssemblyInfo.cs
+C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\Tips\Tips\Tips\obj\Debug\netcoreapp3.1\Tips.csproj.CoreCompileInputs.cache
+C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\Tips\Tips\Tips\obj\Debug\netcoreapp3.1\Tips.dll
+C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\Tips\Tips\Tips\obj\Debug\netcoreapp3.1\Tips.pdb
+C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\Tips\Tips\Tips\obj\Debug\netcoreapp3.1\Tips.genruntimeconfig.cache

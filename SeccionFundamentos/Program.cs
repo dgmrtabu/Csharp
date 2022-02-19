@@ -15,7 +15,8 @@ namespace SeccionFundamentos
 
         static void Main(string[] args)
         {
-            ListaCiclos();
+            var numeroMayor = obtenerMayor(5, 10,12,25,5,3);
+            Console.Write($"El numero mayor es: { numeroMayor }");
             Console.Read();
         }
 
@@ -293,7 +294,7 @@ namespace SeccionFundamentos
 
         }
 
-        static void FundamentosFecha4(){
+        static void FundamentosFecha4() {
 
             var strFecha = "31-12-2000";
             var strFecha2 = "2000-01-01";
@@ -346,8 +347,8 @@ namespace SeccionFundamentos
         static void FundamentosTuble()
         {
             var tubla1 = Tuple.Create(1, "Esto es una cadena");
-            var tubla2 = Tuple.Create(1, 2, true, false, new DateTime(), new DateTime(2022,1,1), string.Empty, "");
-            var tubla3 = Tuple.Create(1, 2, true, false, new DateTime(), new DateTime(2022,1,1), string.Empty, Tuple.Create(1, 2, true, false, new DateTime(), new DateTime(2022, 1, 1), string.Empty, ""));
+            var tubla2 = Tuple.Create(1, 2, true, false, new DateTime(), new DateTime(2022, 1, 1), string.Empty, "");
+            var tubla3 = Tuple.Create(1, 2, true, false, new DateTime(), new DateTime(2022, 1, 1), string.Empty, Tuple.Create(1, 2, true, false, new DateTime(), new DateTime(2022, 1, 1), string.Empty, ""));
 
         }
 
@@ -356,12 +357,12 @@ namespace SeccionFundamentos
             ValueTuple<int, int> tupla1 = (1, 2);
             (int, int) tupla2 = (1, 2);
             var tupla3 = (1, 2);
-            var tupla4 = (1, 2, true, false, new DateTime(), new DateTime(2022, 1, 1), string.Empty, "",1,2,3,4,5,6,7);
+            var tupla4 = (1, 2, true, false, new DateTime(), new DateTime(2022, 1, 1), string.Empty, "", 1, 2, 3, 4, 5, 6, 7);
             var personaje = (1, "Hari", "Seldon", new DateTime(2500, 1, 1));
 
             (int Id, string Nombre, string Apellido, DateTime FechaNacimiento) datosPersona1 = (1, "Isaac", "Asimov", new DateTime(1920, 1, 2));
-            
-            var datosPersona2  = (Id: 1, Nombre: "Dan", Apellido: "Simons", FechaNacimiento: new DateTime(1920, 1, 2));
+
+            var datosPersona2 = (Id: 1, Nombre: "Dan", Apellido: "Simons", FechaNacimiento: new DateTime(1920, 1, 2));
 
             var lista = new List<(int Identificador, string Nombre, string ApellidoPaterno, DateTime Fecha)> { datosPersona1, datosPersona2, personaje };
 
@@ -387,13 +388,13 @@ namespace SeccionFundamentos
         static void ArraryListAgregar()
 
         {
-            var arrayList1 = new ArrayList() { 1, "Mi Cadena", new DateTime(2020,1,1), 125.45m, Guid.NewGuid() };
+            var arrayList1 = new ArrayList() { 1, "Mi Cadena", new DateTime(2020, 1, 1), 125.45m, Guid.NewGuid() };
 
             var arrayList2 = new ArrayList();
 
             arrayList2.Add(1);
             arrayList2.Add("Mi Cadena");
-            arrayList2.Add(new DateTime(2020,1,1));
+            arrayList2.Add(new DateTime(2020, 1, 1));
             arrayList2.Add(125.45m);
             arrayList2.Add(Guid.NewGuid());
 
@@ -402,7 +403,7 @@ namespace SeccionFundamentos
 
             var arrayList4 = new ArrayList() { "A", "B", "C" };
             arrayList4.Insert(1, 1);
-            
+
             var arrayList5 = new ArrayList() { "A", "B", "C" };
             arrayList5.InsertRange(1, arrayList2);
         }
@@ -413,7 +414,7 @@ namespace SeccionFundamentos
 
             var arrayList2 = new ArrayList() { 1, "Mi Cadena", new DateTime(2020, 1, 1), 125.45m, Guid.NewGuid() };
             arrayList2.RemoveAt(2);
-            
+
             var arrayList3 = new ArrayList() { 1, "Mi Cadena", new DateTime(2020, 1, 1), 125.45m, Guid.NewGuid() };
             arrayList3.RemoveRange(1, 3);
             arrayList3.Clear();
@@ -434,7 +435,7 @@ namespace SeccionFundamentos
         static void ArraryListInteraccion() {
 
             var arrayList1 = new ArrayList() { 1, "Mi Cadena", new DateTime(2020, 1, 1), 125.45m, Guid.NewGuid() };
-            foreach ( var item in arrayList1)
+            foreach (var item in arrayList1)
             {
                 Console.WriteLine(item);
             }
@@ -443,7 +444,7 @@ namespace SeccionFundamentos
             Console.WriteLine();
             Console.WriteLine();
 
-            for(int i =0; i< arrayList1.Count; i++)
+            for (int i = 0; i < arrayList1.Count; i++)
             {
                 Console.WriteLine(arrayList1[i]);
             }
@@ -456,14 +457,14 @@ namespace SeccionFundamentos
 
             Console.WriteLine($"Contiene un 1: { arrayList1.Contains(1)}");
             Console.WriteLine($"Contiene un 100: { arrayList1.Contains(100)}");
-            Console.WriteLine($"Contiene fecha '2020-01-01': { arrayList1.Contains(new DateTime(2020,1,1))}");
-            Console.WriteLine($"Contiene fecha '2020-01-02': { arrayList1.Contains(new DateTime(2020,1,2))}");
+            Console.WriteLine($"Contiene fecha '2020-01-01': { arrayList1.Contains(new DateTime(2020, 1, 1))}");
+            Console.WriteLine($"Contiene fecha '2020-01-02': { arrayList1.Contains(new DateTime(2020, 1, 2))}");
             Console.WriteLine();
             Console.WriteLine();
 
             arrayList1.Reverse();
 
-            foreach( var item in arrayList1)
+            foreach (var item in arrayList1)
             {
                 Console.WriteLine(item);
             }
@@ -475,7 +476,7 @@ namespace SeccionFundamentos
 
             arrayList2.Sort();
 
-            foreach( var item in arrayList2)
+            foreach (var item in arrayList2)
             {
                 Console.WriteLine(item);
             }
@@ -498,7 +499,7 @@ namespace SeccionFundamentos
             var sortedList3 = new SortedList();
             sortedList3.Add("Patricio", 1);
             sortedList3.Add("Jorge", Guid.NewGuid());
-            sortedList3.Add("Alex", new DateTime(2022,1,2));
+            sortedList3.Add("Alex", new DateTime(2022, 1, 2));
 
             var sortedList4 = new SortedList()
             {
@@ -516,7 +517,7 @@ namespace SeccionFundamentos
                 {"cuatro",new DateTime(2022,1,1) },
             };
 
-            
+
         }
 
         static void SortedListEliminacion()
@@ -605,7 +606,7 @@ namespace SeccionFundamentos
             };
 
             Console.WriteLine($"---------- For1 ----------");
-            for(int i = 0; i< sortedList1.Count; i++)
+            for (int i = 0; i < sortedList1.Count; i++)
             {
                 Console.WriteLine($"Key: {sortedList1.GetKey(i)}, valor: {sortedList1.GetByIndex(i)}");
             }
@@ -617,7 +618,7 @@ namespace SeccionFundamentos
             }
             Console.WriteLine();
             Console.WriteLine($"---------- ForEach ----------");
-            foreach(DictionaryEntry item in sortedList1)
+            foreach (DictionaryEntry item in sortedList1)
             {
                 Console.WriteLine($"key:{ item.Key}, valor: {item.Value}");
             }
@@ -625,7 +626,7 @@ namespace SeccionFundamentos
             var listaKey = sortedList1.GetKeyList();
             Console.WriteLine();
             Console.WriteLine($"Lista key");
-            foreach(var item in listaKey)
+            foreach (var item in listaKey)
             {
                 Console.WriteLine($"Key:{ item }");
             }
@@ -633,7 +634,7 @@ namespace SeccionFundamentos
             var listaValores = sortedList1.GetValueList();
             Console.WriteLine();
             Console.WriteLine($"Lista Valores");
-            foreach(var item in listaValores)
+            foreach (var item in listaValores)
             {
                 Console.WriteLine($"Valores:{ item}");
             }
@@ -653,7 +654,7 @@ namespace SeccionFundamentos
             var listaKeys = lista.Keys;
             var listaValores = lista.Keys;
 
-            foreach(var item in lista)
+            foreach (var item in lista)
             {
                 Console.WriteLine($"key:{item.Key}, valor{item.Value}");
             }
@@ -672,7 +673,7 @@ namespace SeccionFundamentos
             var hasTable3 = new Hashtable();
             hasTable3.Add(DateTime.Today, 1);
             hasTable3.Add("Jorge", Guid.NewGuid());
-            hasTable3.Add("Alex", new DateTime(2022,1,2));
+            hasTable3.Add("Alex", new DateTime(2022, 1, 2));
 
             var hasTable4 = new Hashtable()
             {
@@ -738,7 +739,7 @@ namespace SeccionFundamentos
             var contieneKey_2 = hashTable1.ContainsKey(2); //Retorna true
             var contieneKey_6 = hashTable1.ContainsKey(6); //Retorna false
 
-            var contieneValor_Fecha = hashTable1.ContainsValue(new DateTime(2022,1,1)); //Retorna true
+            var contieneValor_Fecha = hashTable1.ContainsValue(new DateTime(2022, 1, 1)); //Retorna true
             var contieneValor_Otro = hashTable1.ContainsValue("Otro"); //Retorna false
 
         }
@@ -755,7 +756,7 @@ namespace SeccionFundamentos
 
             Console.WriteLine();
             Console.WriteLine($"---------- ForEach ----------");
-            foreach(DictionaryEntry item in hastTable1)
+            foreach (DictionaryEntry item in hastTable1)
             {
                 Console.WriteLine($"key: {item.Key }, valor: {item.Value}");
             }
@@ -802,7 +803,7 @@ namespace SeccionFundamentos
             var eliminar2 = stack1.Pop();
             var eliminar3 = stack1.Pop();
 
-             stack1.Push(new DateTime(1990, 1, 1));
+            stack1.Push(new DateTime(1990, 1, 1));
 
             var eliminar4 = stack1.Pop();
 
@@ -827,7 +828,7 @@ namespace SeccionFundamentos
             var contiene_1 = stack1.Contains(1);
             var contiene_10 = stack1.Contains(10);
             var cantidad = stack1.Count;
-            
+
         }
 
         static void StackCiclos()
@@ -878,7 +879,7 @@ namespace SeccionFundamentos
             queue1.Enqueue("Mi cadena");
             queue1.Enqueue(1);
             queue1.Enqueue(Guid.NewGuid());
-            queue1.Enqueue(new DateTime(2022,1,1));
+            queue1.Enqueue(new DateTime(2022, 1, 1));
             queue1.Enqueue(125m);
 
         }
@@ -976,10 +977,10 @@ namespace SeccionFundamentos
                 [2] = "Dos",
                 [1] = "Uno",
                 [3] = "Tres",
-                
+
             };
 
-            var diccionario3 = new Dictionary<int, DateTime> ();
+            var diccionario3 = new Dictionary<int, DateTime>();
             diccionario3.Add(1920, new DateTime(1920, 5, 1));
             diccionario3.Add(1950, new DateTime(1950, 5, 1));
             diccionario3.Add(1980, new DateTime(1980, 5, 1));
@@ -1026,8 +1027,8 @@ namespace SeccionFundamentos
                 ["Numero"] = 5,
             };
 
-            var contiene_1 = diccionario1.Contains(new KeyValuePair<string, int> ("Dos", 2)); //Devuelve true
-            var contiene_2 = diccionario1.Contains(new KeyValuePair<string, int> ("Numero", 4)); //Devuelve false
+            var contiene_1 = diccionario1.Contains(new KeyValuePair<string, int>("Dos", 2)); //Devuelve true
+            var contiene_2 = diccionario1.Contains(new KeyValuePair<string, int>("Numero", 4)); //Devuelve false
 
             var contieneKey_2 = diccionario1.ContainsKey("Dos");
             var contieneKey_4 = diccionario1.ContainsKey("Cuatro");
@@ -1091,7 +1092,7 @@ namespace SeccionFundamentos
         static void ListaAgregar()
         {
             var lista1 = new List<int>() { 1, 2, 3, 4, 5 };
-            
+
             var lista2 = new List<string>() { "Unos", "Dos", "Tres" };
 
             var lista3 = new List<int>();
@@ -1103,7 +1104,7 @@ namespace SeccionFundamentos
             var lista4 = new List<int>();
             lista4.Add(10);
             lista4.Add(1000);
-            lista4.Insert(1,100);
+            lista4.Insert(1, 100);
 
             var lista5 = new List<int>();
             lista5.Add(10);
@@ -1119,23 +1120,23 @@ namespace SeccionFundamentos
 
             var lista3 = new List<int>() { 1, 2, 3, 4, 5 };
             lista3.RemoveRange(1, 2);
-            
+
             var lista4 = new List<int>() { 1, 2, 3, 4, 5 };
             lista4.Clear();
         }
-        static void ListaAcceso() 
+        static void ListaAcceso()
         {
             var lista1 = new List<int>() { 1, 2, 3, 4, 5 };
             var num1 = lista1[2];
             var totalElementos = lista1.Count;
         }
-        static void ListaComprobar() 
+        static void ListaComprobar()
         {
             var lista1 = new List<int>() { 1, 2, 3, 4, 5 };
             var contiene_1 = lista1.Contains(3); // Devuelve true
             var contiene_2 = lista1.Contains(10); // Devuelve false
         }
-        static void ListaCiclos() 
+        static void ListaCiclos()
         {
             var lista1 = new List<int>() { 1, 2, 3, 4, 5 };
 
@@ -1155,6 +1156,21 @@ namespace SeccionFundamentos
             {
                 Console.WriteLine($"{item}");
             });
+        }
+
+        static int obtenerMayor(/*int num1, int num2*/params int[] numeros)
+        {
+            var numMayor = 0;
+
+            foreach (var item in numeros)
+            {
+                if(numMayor < item)
+                {
+                    numMayor = item;
+                }
+            }
+            //return num1 > num2 ? num1 : num2;
+            return numMayor;
         }
 
     }
