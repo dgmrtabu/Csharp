@@ -66,39 +66,58 @@ namespace Tips
 
         //}
 
+        //static void Main(string[] args)
+        //{
+        //    //MetodoSinRetorno1((5, 8));
+        //    var resultado = Operaciones2(5);
+        //    var (mult, suma) = Operaciones2(5);
+        //    (var mult1, var suma1) = Operaciones2(5);
+        //    var(mult2, _) = Operaciones2(5);
+        //    Console.WriteLine($"Multiplicacion: {resultado.Multiplicacion}, Suma: {resultado.Suma}");
+        //    Console.Read();
+
+        //}
+
+        //static(int Multiplicacion, int Suma) Operaciones2(int numero)
+        //{
+        //    return (numero * numero, numero + numero);
+        //}
+
+        //static (int, int) Operaciones1(int numero)
+        //{
+        //    return (numero * numero, numero + numero);
+        //}
+
+        //static void MetodoSinRetorno1((int, int) parametro) {
+
+        //    Console.WriteLine(parametro.Item1);
+        //    Console.WriteLine(parametro.Item2);
+        //}
+
+        //static void MetodoSinRetorno2((int Num1, int Nume2) parametro)
+        //{
+
+        //    Console.WriteLine(parametro.Item1);
+        //    Console.WriteLine(parametro.Item2);
+        //}
+
         static void Main(string[] args)
         {
-            //MetodoSinRetorno1((5, 8));
-            var resultado = Operaciones2(5);
-            var (mult, suma) = Operaciones2(5);
-            (var mult1, var suma1) = Operaciones2(5);
-            var(mult2, _) = Operaciones2(5);
-            Console.WriteLine($"Multiplicacion: {resultado.Multiplicacion}, Suma: {resultado.Suma}");
+            int numRef;
+            CalculoRef(ref numRef);
+            int numOut;
+            CalculoOut(ref numOut);
             Console.Read();
 
         }
 
-        static(int Multiplicacion, int Suma) Operaciones2(int numero)
+        static void CalculoRef(ref int numero)
         {
-            return (numero * numero, numero + numero);
+            numero = 25;
         }
-
-        static (int, int) Operaciones1(int numero)
+        static void CalculoOut(out int numero)
         {
-            return (numero * numero, numero + numero);
-        }
-
-        static void MetodoSinRetorno1((int, int) parametro) {
-
-            Console.WriteLine(parametro.Item1);
-            Console.WriteLine(parametro.Item2);
-        }
-
-        static void MetodoSinRetorno2((int Num1, int Nume2) parametro)
-        {
-
-            Console.WriteLine(parametro.Item1);
-            Console.WriteLine(parametro.Item2);
+            numero = 25;
         }
     }
 
