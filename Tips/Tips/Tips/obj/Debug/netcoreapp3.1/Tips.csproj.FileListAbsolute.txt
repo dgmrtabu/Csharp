@@ -12,3 +12,17 @@ C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\Tips\Tips\Tips\obj\Deb
 C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\Tips\Tips\Tips\obj\Debug\netcoreapp3.1\Tips.dll
 C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\Tips\Tips\Tips\obj\Debug\netcoreapp3.1\Tips.pdb
 C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\Tips\Tips\Tips\obj\Debug\netcoreapp3.1\Tips.genruntimeconfig.cache
+C:\Users\david.montano\Documents\Desarrollo\C Sharp\SeccionFundamentos\Tips\Tips\Tips\obj\Debug\netcoreapp3.1\Tips.csproj.AssemblyReference.cache
+C:\Users\david.montano\Documents\Desarrollo\C Sharp\SeccionFundamentos\Tips\Tips\Tips\obj\Debug\netcoreapp3.1\Tips.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\david.montano\Documents\Desarrollo\C Sharp\SeccionFundamentos\Tips\Tips\Tips\obj\Debug\netcoreapp3.1\Tips.AssemblyInfoInputs.cache
+C:\Users\david.montano\Documents\Desarrollo\C Sharp\SeccionFundamentos\Tips\Tips\Tips\obj\Debug\netcoreapp3.1\Tips.AssemblyInfo.cs
+C:\Users\david.montano\Documents\Desarrollo\C Sharp\SeccionFundamentos\Tips\Tips\Tips\obj\Debug\netcoreapp3.1\Tips.csproj.CoreCompileInputs.cache
+C:\Users\david.montano\Documents\Desarrollo\C Sharp\SeccionFundamentos\Tips\Tips\Tips\obj\Debug\netcoreapp3.1\Tips.dll
+C:\Users\david.montano\Documents\Desarrollo\C Sharp\SeccionFundamentos\Tips\Tips\Tips\obj\Debug\netcoreapp3.1\Tips.pdb
+C:\Users\david.montano\Documents\Desarrollo\C Sharp\SeccionFundamentos\Tips\Tips\Tips\bin\Debug\netcoreapp3.1\Tips.exe
+C:\Users\david.montano\Documents\Desarrollo\C Sharp\SeccionFundamentos\Tips\Tips\Tips\bin\Debug\netcoreapp3.1\Tips.deps.json
+C:\Users\david.montano\Documents\Desarrollo\C Sharp\SeccionFundamentos\Tips\Tips\Tips\bin\Debug\netcoreapp3.1\Tips.runtimeconfig.json
+C:\Users\david.montano\Documents\Desarrollo\C Sharp\SeccionFundamentos\Tips\Tips\Tips\bin\Debug\netcoreapp3.1\Tips.runtimeconfig.dev.json
+C:\Users\david.montano\Documents\Desarrollo\C Sharp\SeccionFundamentos\Tips\Tips\Tips\bin\Debug\netcoreapp3.1\Tips.dll
+C:\Users\david.montano\Documents\Desarrollo\C Sharp\SeccionFundamentos\Tips\Tips\Tips\bin\Debug\netcoreapp3.1\Tips.pdb
+C:\Users\david.montano\Documents\Desarrollo\C Sharp\SeccionFundamentos\Tips\Tips\Tips\obj\Debug\netcoreapp3.1\Tips.genruntimeconfig.cache

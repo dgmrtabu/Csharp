@@ -1,4 +1,6 @@
 ﻿using System;
+using static System.Console;
+using static System.Math;
 
 namespace Tips
 {
@@ -100,24 +102,59 @@ namespace Tips
         //    Console.WriteLine(parametro.Item1);
         //    Console.WriteLine(parametro.Item2);
         //}
+        //static void Main(string[] args)
+        //{
+        //    int numRef = 0;
+        //    CalculoRef(ref numRef );
+        //    int numOut;
+        //    CalculoOut(out numOut);
+        //    Console.Read();
+
+        //}
+
+        //static void CalculoRef(ref int numero)
+        //{
+        //    numero++;
+        //    numero = 25;
+        //}
+        //static void CalculoOut(out int numero)
+        //{
+        //    //numero++;
+        //    numero = 25;
+        //}
+
+        //static void Main(string[] args)
+        //{
+        //    ImprimirCuadrado(5);
+        //    var num = Cuadrado(10);
+        //    Console.WriteLine($"El numero al cuadrado es:{ num }");
+        //    Console.Read();
+        //}
+
+        //static void ImprimirCuadrado(int numero) => Console.WriteLine($"{numero} al cuadrado es = {numero * numero}");
+
+        //static int Cuadrado(int numero) => numero * numero;
+
+        //static void Main(string[] args)
+        //{
+        //    WriteLine($"El numero es truncado es { Truncate(4.67m)}");
+        //    WriteLine($"El numero redondeado es { Truncate(4.67m)}");
+        //    Read();
+        //}
 
         static void Main(string[] args)
         {
-            int numRef;
-            CalculoRef(ref numRef);
-            int numOut;
-            CalculoOut(ref numOut);
-            Console.Read();
+            int? num1 = null;
+            int? num2 = 2;
+            int? num3 = null;
 
-        }
+            var numero1 = num1 ?? num2 ?? num3;
+            var numero2 = num1 ?? num2 ?? num3 ?? 0;
+            WriteLine($"{numero1}");
+            WriteLine($"{numero2}");
+            Read();
 
-        static void CalculoRef(ref int numero)
-        {
-            numero = 25;
-        }
-        static void CalculoOut(out int numero)
-        {
-            numero = 25;
+            Read();
         }
     }
 
