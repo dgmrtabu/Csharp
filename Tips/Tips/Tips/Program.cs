@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using static System.Console;
 using static System.Math;
 
@@ -142,20 +143,177 @@ namespace Tips
         //    Read();
         //}
 
+        //static void Main(string[] args)
+        //{
+        //    int? num1 = null;
+        //    int? num2 = 2;
+        //    int? num3 = null;
+
+        //    var numero1 = num1 ?? num2 ?? num3;
+        //    var numero2 = num1 ?? num2 ?? num3 ?? 0;
+        //    WriteLine($"{numero1}");
+        //    WriteLine($"{numero2}");
+        //    Read();
+        //}
+
+        //static void Main(string[] args)
+        //{
+        //    EjemploNullCondicional2();
+        //    Read();
+        //}
+
+        //static void EjemploNullCondicional1()
+        //{
+        //    List<int> listaNumeros = null;
+        //    //List<int> listaNumeros = new List<int> { 1,2};
+        //    if (/*listaNumeros != null && */listaNumeros?.Count > 0)
+        //    {
+        //        WriteLine("La lista tiene elementos");
+        //    }
+        //    else
+        //    {
+        //        WriteLine("La lista tiene 0 elementos");
+        //    }
+
+        //    if ((listaNumeros?.Count ?? 0) > 2)
+        //    {
+        //        WriteLine("La lista tiene elementos");
+        //    }
+        //    else
+        //    {
+        //        WriteLine("La lista tiene 2 elementos");
+        //    }
+        //}
+
+        //static void EjemploNullCondicional2()
+        //{
+        //    Persona persona = null;
+        //    var apellido1 = persona?.Apellido;
+        //    var apellido2 = persona?.Apellido ?? string.Empty;
+
+        //    var largoApellidos1 = persona?.Apellido.Length;
+        //    //var largoApellidos2 = (persona?.Apellido).Length;
+
+        //    List<Persona> listaPersona = null;
+        //    if(listaPersona?.Count > 0)
+        //    {
+        //        // Acciones
+        //    }
+
+        //    var apellidoLinq = listaPersona?.FirsOrDefault()?.Apellido;
+        //}
+
+
+        //class Persona
+        //{
+        //    public int Id { get; set; }
+        //    public string Nombre { get; set; }
+        //    public string Apellido { get; set; }
+        //}
+
         static void Main(string[] args)
         {
-            int? num1 = null;
-            int? num2 = 2;
-            int? num3 = null;
-
-            var numero1 = num1 ?? num2 ?? num3;
-            var numero2 = num1 ?? num2 ?? num3 ?? 0;
-            WriteLine($"{numero1}");
-            WriteLine($"{numero2}");
+            MetodoIsAsignacionDirecta();
             Read();
+        }
 
-            Read();
+        static void MetodoIs()
+        {
+            var arrayObjetos = new object[6];
+            arrayObjetos[0] = new Prueba();
+            arrayObjetos[1] = "Mi String";
+            arrayObjetos[2] = 125;
+            arrayObjetos[3] = new DateTime(2020,1,1);
+            arrayObjetos[4] = "1000";
+            arrayObjetos[5] = null;
+
+            for(int i =0; i< arrayObjetos.Length; i++)
+            {
+                WriteLine();
+                if (arrayObjetos[i] is DateTime)
+                {
+                    WriteLine($"{i}:{arrayObjetos[i]} es un campo fecha");
+                }
+                else
+                {
+                    WriteLine($"{i}: No es un  campo fecha");
+                }
+            }
+        }
+
+        static void MetodoAs()
+        {
+            var arrayObjetos = new object[6];
+            arrayObjetos[0] = new Prueba();
+            arrayObjetos[1] = "Mi String";
+            arrayObjetos[2] = 125;
+            arrayObjetos[3] = new DateTime(2020, 1, 1);
+            arrayObjetos[4] = "1000";
+            arrayObjetos[5] = null;
+
+            for (int i = 0; i < arrayObjetos.Length; i++)
+            {
+                var info = arrayObjetos[i] as DateTime?;
+                WriteLine();
+                if (info != null)
+                {
+                    WriteLine($"{i}:{info.Value.AddDays(15)}");
+                }
+                else
+                {
+                    WriteLine($"{i}: No es un  campo fecha");
+                }
+            }
+        }
+
+        static void MetodoIsAsignacionDirecta()
+        {
+            var arrayObjetos = new object[6];
+            arrayObjetos[0] = new Prueba();
+            arrayObjetos[1] = "Mi String";
+            arrayObjetos[2] = 125;
+            arrayObjetos[3] = new DateTime(2020, 1, 1);
+            arrayObjetos[4] = "1000";
+            arrayObjetos[5] = null;
+
+            for (int i = 0; i < arrayObjetos.Length; i++)
+            {
+                WriteLine();
+                if (arrayObjetos[i] is DateTime fecha)
+                {
+                    WriteLine($"{i}: esto es una fecha --> {fecha}");
+                }
+                else if (arrayObjetos[i] is int numero || (arrayObjetos[i] is string strAux && int.TryParse(strAux, out numero)))
+                {
+                    WriteLine($"{i}: esto es un {(arrayObjetos[i] is int ? "int" : "string/int")}-> {numero}");
+                }
+                else if (arrayObjetos[i] is string str)
+                {
+                    WriteLine($"{i}: esto es una cadena --> {str}");
+                }
+                else
+                {
+                    WriteLine($"{i}: Es desconocido");
+                }
+
+                switch (arrayObjetos[i])
+                {
+                    case DateTime swFecha:
+                        WriteLine($"{i}: esta es una fecha --> {swFecha}");
+                        break;
+                    case var swNum when(swNum is int numero || (swNum is string strAux && int.TryParse(strAux, out numero))):
+                        WriteLine($"{i}: esto es un {(swNum is int ? "int" : "string/int")}-> {numero}");
+                        break;
+                    case string swStr:
+                        WriteLine($"{i}: esta es una cadena --> {swStr}");
+                        break;
+                    default:
+                        WriteLine($"{i}: Es desconocido");
+                        break;
+                }
+            }
         }
     }
 
+    class Prueba { }
 }
