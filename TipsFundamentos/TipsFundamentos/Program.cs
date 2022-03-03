@@ -1,6 +1,7 @@
 ﻿using System;
 using static System.Console;
 using System.Diagnostics;
+using System.Collections.Generic;
 
 namespace TipsFundamentos
 {
@@ -33,30 +34,92 @@ namespace TipsFundamentos
         //    Read();
         //}
 
+        //static void Main(string[] args)
+        //{
+        //    var tiempo = new Stopwatch();
+
+        //    tiempo.Start();
+        //    for(int i = 0; i<1000000; i++)
+        //    {
+
+        //    }
+        //    tiempo.Stop();
+
+        //    WriteLine($"Duracion {tiempo.Elapsed.TotalMilliseconds} ms");
+
+        //    tiempo.Reset();
+        //    tiempo.Start();
+        //    for (int i = 0; i < 10; i++)
+        //    {
+        //        System.Threading.Thread.Sleep(500);
+        //    }
+        //    tiempo.Stop();
+
+        //    Read();
+        //}
+
+        //static void Main(string[] args)
+        //{
+        //    Ejemplo3();
+        //    Read();
+        //}
+
+        //static void Ejemplo1()
+        //{
+        //    var numero = int.MaxValue;
+
+        //    try
+        //    {
+        //        var suma = checked(numero + 1);
+        //    }
+        //    catch(Exception ex)
+        //    {
+        //        WriteLine(ex.Message);
+        //    }
+        //}
+        //static void Ejemplo2()
+        //{
+        //    var numero = 100_000;
+        //    var cuadrado = 0;
+
+        //    try
+        //    {
+        //        cuadrado = checked(numero * numero);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        WriteLine(ex.Message);
+        //    }
+        //}
+        //static void Ejemplo3()
+        //{
+        //    var numero = 100_000;
+        //    var numero2 = int.MaxValue;
+        //    var cuadrado = 0;
+
+        //    try
+        //    {
+        //        checked
+        //        {
+        //            var suma = numero2 - 1;
+        //            cuadrado = checked(numero * numero);
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        WriteLine(ex.Message);
+        //    }
+        //}
+
         static void Main(string[] args)
         {
-            var tiempo = new Stopwatch();
+            var lista = new List<long> { 1000, 3_000_000, 700_000, 9_000_000_000};
 
-            tiempo.Start();
-            for(int i = 0; i<1000000; i++)
+            foreach(var item in lista)
             {
-
+                WriteLine(item);
             }
-            tiempo.Stop();
-
-            WriteLine($"Duracion {tiempo.Elapsed.TotalMilliseconds} ms");
-
-            tiempo.Reset();
-            tiempo.Start();
-            for (int i = 0; i < 10; i++)
-            {
-                System.Threading.Thread.Sleep(500);
-            }
-            tiempo.Stop();
-
             Read();
         }
-
-
     }
 }
