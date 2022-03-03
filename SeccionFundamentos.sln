@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeccionFundamentos", "Secci
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tips", "Tips\Tips\Tips\Tips.csproj", "{AC9873AD-56BB-4265-B27A-637E8498E52F}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TipsFundamentos", "TipsFundamentos\TipsFundamentos\TipsFundamentos.csproj", "{42CDF4BF-02D3-42A8-AEC4-C4E4014B2D60}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{AC9873AD-56BB-4265-B27A-637E8498E52F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC9873AD-56BB-4265-B27A-637E8498E52F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC9873AD-56BB-4265-B27A-637E8498E52F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42CDF4BF-02D3-42A8-AEC4-C4E4014B2D60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42CDF4BF-02D3-42A8-AEC4-C4E4014B2D60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42CDF4BF-02D3-42A8-AEC4-C4E4014B2D60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42CDF4BF-02D3-42A8-AEC4-C4E4014B2D60}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

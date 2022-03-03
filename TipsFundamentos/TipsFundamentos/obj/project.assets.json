@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\David Montaño Rocha\\Documents\\Desarrollo\\Csharp\\Tips\\Tips\\Tips\\Tips.csproj",
-      "projectName": "Tips",
-      "projectPath": "C:\\Users\\David Montaño Rocha\\Documents\\Desarrollo\\Csharp\\Tips\\Tips\\Tips\\Tips.csproj",
+      "projectUniqueName": "C:\\Users\\David Montaño Rocha\\Documents\\Desarrollo\\Csharp\\TipsFundamentos\\TipsFundamentos\\TipsFundamentos.csproj",
+      "projectName": "TipsFundamentos",
+      "projectPath": "C:\\Users\\David Montaño Rocha\\Documents\\Desarrollo\\Csharp\\TipsFundamentos\\TipsFundamentos\\TipsFundamentos.csproj",
       "packagesPath": "C:\\Users\\David Montaño Rocha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\David Montaño Rocha\\Documents\\Desarrollo\\Csharp\\Tips\\Tips\\Tips\\obj\\",
+      "outputPath": "C:\\Users\\David Montaño Rocha\\Documents\\Desarrollo\\Csharp\\TipsFundamentos\\TipsFundamentos\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\David Montaño Rocha\\AppData\\Roaming\\NuGet\\NuGet.Config",

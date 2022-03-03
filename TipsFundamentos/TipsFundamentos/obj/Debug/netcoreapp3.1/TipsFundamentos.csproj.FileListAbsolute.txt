@@ -1,0 +1,14 @@
+C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\TipsFundamentos\TipsFundamentos\bin\Debug\netcoreapp3.1\TipsFundamentos.exe
+C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\TipsFundamentos\TipsFundamentos\bin\Debug\netcoreapp3.1\TipsFundamentos.deps.json
+C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\TipsFundamentos\TipsFundamentos\bin\Debug\netcoreapp3.1\TipsFundamentos.runtimeconfig.json
+C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\TipsFundamentos\TipsFundamentos\bin\Debug\netcoreapp3.1\TipsFundamentos.runtimeconfig.dev.json
+C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\TipsFundamentos\TipsFundamentos\bin\Debug\netcoreapp3.1\TipsFundamentos.dll
+C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\TipsFundamentos\TipsFundamentos\bin\Debug\netcoreapp3.1\TipsFundamentos.pdb
+C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\TipsFundamentos\TipsFundamentos\obj\Debug\netcoreapp3.1\TipsFundamentos.csproj.AssemblyReference.cache
+C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\TipsFundamentos\TipsFundamentos\obj\Debug\netcoreapp3.1\TipsFundamentos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\TipsFundamentos\TipsFundamentos\obj\Debug\netcoreapp3.1\TipsFundamentos.AssemblyInfoInputs.cache
+C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\TipsFundamentos\TipsFundamentos\obj\Debug\netcoreapp3.1\TipsFundamentos.AssemblyInfo.cs
+C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\TipsFundamentos\TipsFundamentos\obj\Debug\netcoreapp3.1\TipsFundamentos.csproj.CoreCompileInputs.cache
+C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\TipsFundamentos\TipsFundamentos\obj\Debug\netcoreapp3.1\TipsFundamentos.dll
+C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\TipsFundamentos\TipsFundamentos\obj\Debug\netcoreapp3.1\TipsFundamentos.pdb
+C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\TipsFundamentos\TipsFundamentos\obj\Debug\netcoreapp3.1\TipsFundamentos.genruntimeconfig.cache
