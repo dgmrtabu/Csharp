@@ -2,6 +2,7 @@
 using static System.Console;
 using System.Diagnostics;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace TipsFundamentos
 {
@@ -111,15 +112,51 @@ namespace TipsFundamentos
         //    }
         //}
 
+        //static void Main(string[] args)
+        //{
+        //    var lista = new List<long> { 1000, 3_000_000, 700_000, 9_000_000_000};
+
+        //    foreach(var item in lista)
+        //    {
+        //        WriteLine(item);
+        //    }
+        //    Read();
+        //}
+
         static void Main(string[] args)
         {
-            var lista = new List<long> { 1000, 3_000_000, 700_000, 9_000_000_000};
-
-            foreach(var item in lista)
-            {
-                WriteLine(item);
-            }
+            EjemploConsumoYield();
             Read();
+        }
+
+        public static void EjemploConsumoYield()
+        {
+            //var lista = EjemploCreacionYield();
+
+            var lista = EjemploCreacionYield().ToList();
+            var contador = EjemploCreacionYield().Count();
+
+            foreach (var item in lista)
+            {
+                System.Threading.Thread.Sleep(1000);
+                WriteLine($"Consumo: {item}");
+            }
+        }
+
+        public static IEnumerable<int> EjemploCreacionYield()
+        {
+            for(int i = 0; i< 15; i++)
+            {
+                if(i == 5)
+                {
+                    WriteLine($"Yield Breac");
+                    yield break;
+                }
+                System.Threading.Thread.Sleep(1000);
+                WriteLine($"Yield:{i + 1}");
+                yield return i + 1;
+
+            }
         }
     }
 }

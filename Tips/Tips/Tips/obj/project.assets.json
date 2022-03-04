@@ -8,24 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\david.montano\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\David Montaño Rocha\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\david.montano\\Documents\\Desarrollo\\C Sharp\\SeccionFundamentos\\Tips\\Tips\\Tips\\Tips.csproj",
+      "projectUniqueName": "C:\\Users\\David Montaño Rocha\\Documents\\Desarrollo\\Csharp\\Tips\\Tips\\Tips\\Tips.csproj",
       "projectName": "Tips",
-      "projectPath": "C:\\Users\\david.montano\\Documents\\Desarrollo\\C Sharp\\SeccionFundamentos\\Tips\\Tips\\Tips\\Tips.csproj",
-      "packagesPath": "C:\\Users\\david.montano\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\david.montano\\Documents\\Desarrollo\\C Sharp\\SeccionFundamentos\\Tips\\Tips\\Tips\\obj\\",
+      "projectPath": "C:\\Users\\David Montaño Rocha\\Documents\\Desarrollo\\Csharp\\Tips\\Tips\\Tips\\Tips.csproj",
+      "packagesPath": "C:\\Users\\David Montaño Rocha\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\David Montaño Rocha\\Documents\\Desarrollo\\Csharp\\Tips\\Tips\\Tips\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\david.montano\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\David Montaño Rocha\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -65,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
       }
     }
   }
