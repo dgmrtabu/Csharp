@@ -1,0 +1,7 @@
+C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\SeccionMetodosExtencion\SeccionMetodosExtencion\bin\Debug\SeccionMetodosExtencion.exe.config
+C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\SeccionMetodosExtencion\SeccionMetodosExtencion\bin\Debug\SeccionMetodosExtencion.exe
+C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\SeccionMetodosExtencion\SeccionMetodosExtencion\bin\Debug\SeccionMetodosExtencion.pdb
+C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\SeccionMetodosExtencion\SeccionMetodosExtencion\obj\Debug\SeccionMetodosExtencion.csproj.AssemblyReference.cache
+C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\SeccionMetodosExtencion\SeccionMetodosExtencion\obj\Debug\SeccionMetodosExtencion.csproj.CoreCompileInputs.cache
+C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\SeccionMetodosExtencion\SeccionMetodosExtencion\obj\Debug\SeccionMetodosExtencion.exe
+C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\SeccionMetodosExtencion\SeccionMetodosExtencion\obj\Debug\SeccionMetodosExtencion.pdb
