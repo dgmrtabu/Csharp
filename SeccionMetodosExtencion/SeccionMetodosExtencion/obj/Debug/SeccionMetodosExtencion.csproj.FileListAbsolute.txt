@@ -5,3 +5,10 @@ C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\SeccionMetodosExtencio
 C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\SeccionMetodosExtencion\SeccionMetodosExtencion\obj\Debug\SeccionMetodosExtencion.csproj.CoreCompileInputs.cache
 C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\SeccionMetodosExtencion\SeccionMetodosExtencion\obj\Debug\SeccionMetodosExtencion.exe
 C:\Users\David Montaño Rocha\Documents\Desarrollo\Csharp\SeccionMetodosExtencion\SeccionMetodosExtencion\obj\Debug\SeccionMetodosExtencion.pdb
+C:\Users\david.montano\Documents\Desarrollo\C Sharp\Csharp\SeccionMetodosExtencion\SeccionMetodosExtencion\bin\Debug\SeccionMetodosExtencion.exe.config
+C:\Users\david.montano\Documents\Desarrollo\C Sharp\Csharp\SeccionMetodosExtencion\SeccionMetodosExtencion\bin\Debug\SeccionMetodosExtencion.exe
+C:\Users\david.montano\Documents\Desarrollo\C Sharp\Csharp\SeccionMetodosExtencion\SeccionMetodosExtencion\bin\Debug\SeccionMetodosExtencion.pdb
+C:\Users\david.montano\Documents\Desarrollo\C Sharp\Csharp\SeccionMetodosExtencion\SeccionMetodosExtencion\obj\Debug\SeccionMetodosExtencion.csproj.AssemblyReference.cache
+C:\Users\david.montano\Documents\Desarrollo\C Sharp\Csharp\SeccionMetodosExtencion\SeccionMetodosExtencion\obj\Debug\SeccionMetodosExtencion.csproj.CoreCompileInputs.cache
+C:\Users\david.montano\Documents\Desarrollo\C Sharp\Csharp\SeccionMetodosExtencion\SeccionMetodosExtencion\obj\Debug\SeccionMetodosExtencion.exe
+C:\Users\david.montano\Documents\Desarrollo\C Sharp\Csharp\SeccionMetodosExtencion\SeccionMetodosExtencion\obj\Debug\SeccionMetodosExtencion.pdb
